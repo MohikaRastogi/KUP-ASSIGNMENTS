@@ -1,6 +1,6 @@
 package com.knoldus
 
-import scala.io.StdIn
+
 import org.scalatest.funsuite.AnyFunSuite
 
 class ElectricityChargesTest extends AnyFunSuite{
