@@ -1,4 +1,5 @@
 *.class
+.idea
 .bsp
 target/
 !.mvn/wrapper/maven-wrapper.jar
