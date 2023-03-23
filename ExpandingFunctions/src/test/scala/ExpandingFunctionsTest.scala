@@ -2,9 +2,8 @@ package com.knoldus
 
 import org.scalatest.funsuite.AnyFunSuite
 
-class ExpandingFunctionsTest extends AnyFunSuite{
-  test("test for addExpanded using two integers")
-  {
+class ExpandingFunctionsTest extends AnyFunSuite {
+  test("test for addExpanded using two integers") {
     val result = ExpandingFunctions.addExpanded(2, 3)
     assert(result == 5)
   }
@@ -13,8 +12,7 @@ class ExpandingFunctionsTest extends AnyFunSuite{
     assert(result == 15)
   }
 
-  test("test for higherOrderFunctionExpanded ")
-  {
+  test("test for higherOrderFunctionExpanded ") {
     val someFunction: Int => Int = number => number * 2
     val result = ExpandingFunctions.higherOrderFunctionExpanded.apply(someFunction, 4)
     assert(result == 8)

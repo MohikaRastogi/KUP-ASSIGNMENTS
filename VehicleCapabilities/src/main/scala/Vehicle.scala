@@ -4,39 +4,32 @@ import scala.util.{Try, Success, Failure}
 
 
 //vehicle
-trait Vehicle
-{
-  def move(): String            //abstract method
+trait Vehicle {
+  def move(): String //abstract method
 }
 
-trait Driven extends Vehicle
-{
-  def drive(): String = "driven"   //concrete method
+trait Driven extends Vehicle {
+  def drive(): String = "driven" //concrete method
 }
 
-trait Sailed extends Vehicle
-{
+trait Sailed extends Vehicle {
   def sail(): String = "sailed"
 }
 
-trait Flown extends Vehicle
-{
+trait Flown extends Vehicle {
   def fly(): String = "flown"
 }
 
 //car is a class which extends a trait named Driven
-class Car extends Driven
-{
-  override def move(): String = s"Car can be ${drive}"    //overriding move method of Vehicle trait
+class Car extends Driven {
+  override def move(): String = s"Car can be ${drive}" //overriding move method of Vehicle trait
 }
 
-class Boat extends Sailed
-{
+class Boat extends Sailed {
   override def move(): String = s"Boat can be ${sail}"
 }
 
-class Aeroplane extends Flown
- {
+class Aeroplane extends Flown {
   override def move(): String = s"Aeroplane can be ${fly}"
 }
 
@@ -44,8 +37,7 @@ class FlyingCars extends Driven with Flown {
   override def move(): String = s"Flying Cars: can be $drive and $fly"
 }
 
-class HoverCrafts extends Driven with Sailed
-{
+class HoverCrafts extends Driven with Sailed {
   override def move(): String = s"Hover Crafts: can be $sail and $drive"
 }
 
@@ -60,36 +52,31 @@ object VehicleCapabilities extends App // creating singleton object
 
   //exception handling using Try
   val resultForCar = Try(car.move)
-  resultForCar match
-  {
+  resultForCar match {
     case Success(resultForCar) => resultForCar
     case Failure(exception) => exception.getMessage
   }
 
   val resultForBoat = Try(boat.move)
-  resultForBoat match
-  {
+  resultForBoat match {
     case Success(resultForBoat) => resultForBoat
     case Failure(exception) => exception.getMessage
   }
 
   val resultForAeroplane = Try(aeroplane.move)
-  resultForAeroplane match
-  {
+  resultForAeroplane match {
     case Success(resultForAeroplane) => resultForAeroplane
     case Failure(exception) => exception.getMessage
   }
 
   val resultForFlyingCars = Try(flyingCar.move)
-  resultForFlyingCars match
-  {
+  resultForFlyingCars match {
     case Success(resultForFlyingCars) => resultForFlyingCars
     case Failure(exception) => exception.getMessage
   }
 
   val resultForHoverCrafts = Try(hovercraft.move)
-  resultForHoverCrafts match
-  {
+  resultForHoverCrafts match {
     case Success(resultForHoverCrafts) => resultForHoverCrafts
     case Failure(exception) => exception.getMessage
   }
