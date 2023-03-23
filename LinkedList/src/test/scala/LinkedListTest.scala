@@ -4,6 +4,8 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 class LinkedListTest extends AnyFlatSpec {
 
+  // Test for Integer type of data/List
+
   "A LinkedList" should "insert elements at the head" in {
     val list = new LinkedList[Int]
     assert(list.insert(3) == 3)
