@@ -1,5 +1,5 @@
 ## session 3
-##Day 1 Assignment -  Banking Application
+## Day 1 Assignment -  Banking Application
 
 Create a banking application using Map[Long, Double] 
 account number -> Long
