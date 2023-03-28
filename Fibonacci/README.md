@@ -1,6 +1,6 @@
 ###### Session 4 Day 2 Assignment 2
-
-##### Problem:
+### Fibonacci Using Tail Recursion
+#### Problem:
 Create a class with a annotated method fibonacci that takes an integer n as a parameter and returns the nth Fibonacci number.
 
 Annotate the fibonacci method with the @tailrec annotation to indicate that the method uses tail recursion.
