@@ -1,6 +1,6 @@
 #### Session 4 Day 1 Assignment 1
 ### Problem : Capitalize all A's IN a list
-###scala
+### scala
 
 Write a program to capitalize all 'A's in a list:
 
