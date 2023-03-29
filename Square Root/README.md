@@ -1,6 +1,6 @@
 #### Session 4 Day 1 Assignment 2
 ### Problem : Find square root of Each element of list
-###scala
+### scala
 
 Session 4 Day 1 Assignment 2
 
