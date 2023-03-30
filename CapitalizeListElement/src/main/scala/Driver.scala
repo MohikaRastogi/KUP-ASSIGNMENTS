@@ -11,7 +11,7 @@ object Driver extends App {
   // it will throw an exception if list is empty, hence Failure
   private val result = Try(capitalizeListElementObject.capitalizeALlAInList(inputList))
   result match {
-    case Success(value) => println(capitalizeListElementObject.capitalizeALlAInList(inputList))
+    case Success(value) => println(value)
     case Failure(exception) => println(exception)
   }
 }
