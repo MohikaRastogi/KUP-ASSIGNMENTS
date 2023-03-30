@@ -14,9 +14,20 @@ object DriverMain extends App {
   private val paymentSystem = new PaymentSystem
 
   // Creating instances of payment methods to be added to the payment system
-  private val creditCard = CreditCard("1234567890123456", "12/25")
-  private val payPal = PayPal("john.doe@example.com", "password")
-  private val bankTransfer = BankTransfer("1234567890", "987654321")
+  println("Enter credit card number and expiry date as string  eg:- 1234567890123456 and date: 12/25")
+  private val cardNumber = StdIn.readLine()
+  private val expiryDate = StdIn.readLine()
+
+  println("Enter email and password for paypal")
+  private val email = StdIn.readLine()
+  private val password = StdIn.readLine()
+
+  println("Enter account number and routing number")
+  private val accountNumber = StdIn.readLine()
+  private val routingNUmber = StdIn.readLine()
+  private val creditCard = CreditCard(cardNumber, expiryDate)
+  private val payPal = PayPal(email, password)
+  private val bankTransfer = BankTransfer(accountNumber, routingNUmber)
 
   // Adding payment methods to the payment system
   paymentSystem.addPaymentMethod(creditCard)
