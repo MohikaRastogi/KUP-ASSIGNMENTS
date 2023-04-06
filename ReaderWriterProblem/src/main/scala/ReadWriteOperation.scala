@@ -17,7 +17,7 @@ class ReadWriteOperation {
   def writeOperation(): Unit = {
     lock.writeLock()
     try {
-      println(s"Writer ${Thread.currentThread().getName} is modifying the shared resource")
+      println(s"Writer ${Thread.currentThread().getName} is updating the shared resource")
       sharedResource = sharedResource :+ sharedResource.length
       Thread.sleep(1000)
     } finally {
